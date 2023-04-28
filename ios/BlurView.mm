@@ -140,7 +140,7 @@ using namespace facebook::react;
     if ([self.blurType isEqual: @"prominent"]) return UIBlurEffectStyleProminent;
   #endif
     
-  #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 /* __IPHONE_13_0 */
+  #if TARGET_OS_IOS && defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 /* __IPHONE_13_0 */
     // Adaptable blur styles
     if ([self.blurType isEqual: @"chromeMaterial"]) return UIBlurEffectStyleSystemChromeMaterial;
     if ([self.blurType isEqual: @"material"]) return UIBlurEffectStyleSystemMaterial;
